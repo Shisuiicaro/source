@@ -1,0 +1,5 @@
+# About the Source:
+> This source was created using a Python script that scrapes all the game links (Qiwi, Gofile, and 1fichier) from the Repack-Games website, adding over 10,000 direct download links to the Hydra launcher. This setup ensures fast and reliable downloads, eliminating issues with dead torrents or slow speeds. The source receives weekly updates. If you encounter any issues with the source, feel free to reach out to \"Shisuys\" on Discord.
+
+# About the Repacks:
+> Repack-Games provides exclusive repacks, featuring both new releases and updates. All games come pre-installed, so you only need to extract the files and start playing without the hassle of installation. The site is updated daily with new games, DLCs, and fixes, boasting over 20,000 games and counting. According to their website, Reddit posts, and personal experience, the repacks are 100% safe and malware-free. If you encounter any issues with the repacks, refer to the [FAQ](https://repack-games.com/troubleshoot), and if you want to request a game, you can use the request system on their [Discord](https://discord.com/invite/BCb8TcJxVr).
