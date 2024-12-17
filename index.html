@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shisuy's Source</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat';
+    }
+
+    body {
+      background-image: linear-gradient(230deg,#23262f,#1f2129,#1d1f26,#1b1d23,#16191d,#141619,#121417 60%,#101114 70% 80%,#0d0f11 90%,#0b0c0e);
+      color: #ffffff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      padding-top: 80px;
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 300;
+      color: #d1d1d1;
+      margin-bottom: 20px;
+      margin-top: 5px;
+    }
+
+    .content {
+      margin: 10px 0px 35px 0px; 
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .content button {
+      background-color: #3b3f4b;
+      color: #ffffff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .content button:hover {
+      background-color: #505360;
+      transform: scale(1.05);
+    }
+
+    .info {
+      max-width: 800px;
+      margin: 20px auto 40px;
+      padding: 20px;
+      background-color: rgba(34, 36, 43, 0.9);
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .info h3 {
+      text-align: left;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .info p {
+      margin-bottom: 15px;
+      word-spacing: -0.05rem;
+      text-align: left;
+      font-weight: 500;
+    }
+
+    footer {
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #aaaaaa;
+    }
+
+    .language-selector {
+      margin-top: 20px;
+      text-align: right;
+      margin-right: 20px;
+    }
+
+    .language-selector select {
+      padding: 5px;
+      border: none;
+      background-color: #3b3f4b;
+      color: #ffffff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    a:-webkit-any-link {
+      color: #a3a9ff;
+    }
+  </style>
+  <script>
+    const translations = {
+      pt: {
+        title: "Shisuy's Source",
+        subtitle: "Repack-Games.com",
+        sourceHeader: "Sobre a Fonte",
+        sourceInfo: "Esta fonte foi criada utilizando um script Python que coleta todos os links de jogos (Qiwi, Gofile e 1fichier) do site Repack-Games, adicionando mais de 10.000 links de download direto ao Hydra launcher. Essa configuração garante downloads rápidos e confiáveis, eliminando problemas com torrents mortos ou lentidão. A fonte recebe atualizações semanais. Se você encontrar qualquer problema com a fonte, fique à vontade para entrar em contato com \"Shisuys\" no Discord.",
+        repackHeader: "Sobre os Repacks",
+        repackInfo: "O Repack-Games fornece repacks exclusivos, incluindo lançamentos recentes e atualizações. Todos os jogos já vêm pré-instalados, então você só precisa extrair os arquivos e começar a jogar, sem a complicação da instalação. O site é atualizado diariamente com novos jogos, DLCs e correções, com mais de 20.000 jogos e contando. De acordo com o site deles, postagens no Reddit e experiência pessoal, os repacks são 100% seguros e livres de malwares. Se você encontrar algum problema com os repacks, consulte o <a href=\"https://repack-games.com/troubleshoot\" target=\"_blank\">FAQ</a>, e se quiser solicitar um jogo, pode usar o sistema de pedidos no <a href=\"https://discord.com/invite/BCb8TcJxVr\" target=\"_blank\">Discord</a> deles.",
+        copy: "Copiar Link",
+        add: "Adicionar ao Hydra",
+        footer: "&copy; 2024 Shisuy's Source"
+      },
+      en: {
+        title: "Shisuy's Source",
+        subtitle: "Repack-Games.com",
+        sourceHeader: "About the Source",
+        sourceInfo: "This source was created using a Python script that scrapes all the game links (Qiwi, Gofile, and 1fichier) from the Repack-Games website, adding over 10,000 direct download links to the Hydra launcher. This setup ensures fast and reliable downloads, eliminating issues with dead torrents or slow speeds. The source receives weekly updates. If you encounter any issues with the source, feel free to reach out to \"Shisuys\" on Discord.",
+        repackHeader: "About the Repacks",
+        repackInfo: "Repack-Games provides exclusive repacks, featuring both new releases and updates. All games come pre-installed, so you only need to extract the files and start playing without the hassle of installation. The site is updated daily with new games, DLCs, and fixes, boasting over 20,000 games and counting. According to their website, Reddit posts, and personal experience, the repacks are 100% safe and malware-free. If you encounter any issues with the repacks, refer to the <a href=\"https://repack-games.com/troubleshoot\" target=\"_blank\">FAQ</a>, and if you want to request a game, you can use the request system on their <a href=\"https://discord.com/invite/BCb8TcJxVr\" target=\"_blank\">Discord</a>.",
+        copy: "Copy Link",
+        add: "Add to Hydra",  
+        footer: "&copy; 2024 Shisuy's Source"
+      },
+      ru: {
+        title: "Shisuy's Source",
+        subtitle: "Repack-Games.com",
+        sourceHeader: "О источнике",
+        sourceInfo: "Этот источник был создан с помощью Python-скрипта, который собирает все ссылки на игры (Qiwi, Gofile и 1fichier) с сайта Repack-Games, добавляя более 10 000 прямых ссылок для скачивания в Hydra launcher. Эта настройка обеспечивает быстрые и надежные скачивания, устраняя проблемы с неактивными торрентами или медленной скоростью. Источник обновляется еженедельно. Если у вас возникли проблемы с источником, не стесняйтесь связаться с \"Shisuys\" в Discord.",
+        repackHeader: "О репаках",
+        repackInfo: "Repack-Games предоставляет эксклюзивные репаки, включая как новые релизы, так и обновления. Все игры уже предустановлены, вам нужно только извлечь файлы и начать играть без лишних шагов установки. Сайт обновляется ежедневно новыми играми, DLC и исправлениями, в общей сложности более 20 000 игр и продолжает расти. Согласно их сайту, постам на Reddit и личному опыту, репаки на 100% безопасны и не содержат вредоносных программ. Если у вас возникли проблемы с репаками, ознакомьтесь с <a href=\"https://repack-games.com/troubleshoot\" target=\"_blank\">FAQ</a>, а если вы хотите запросить игру, используйте систему запросов на их <a href=\"https://discord.com/invite/BCb8TcJxVr\" target=\"_blank\">Discord</a>.",
+        copy: "Копировать ссылку",
+        add: "Добавить в Hydra",
+        footer: "&copy; 2024 Shisuy's Source"
+      }
+    };
+
+    function changeLanguage(lang) {
+      const t = translations[lang];
+      document.getElementById("title").innerText = t.title;
+      document.getElementById("subtitle").innerText = t.subtitle;
+      document.getElementById("sourceHeader").innerText = t.sourceHeader;
+      document.getElementById("sourceInfo").innerText = t.sourceInfo;
+      document.getElementById("repackHeader").innerText = t.repackHeader;
+      document.getElementById("repackInfo").innerHTML = t.repackInfo; 
+      document.getElementById("copyBtn").innerText = t.copy;
+      document.getElementById("addBtn").innerText = t.add;
+      document.getElementById("footer").innerHTML = t.footer;
+    }
+
+    function copyLink() {
+      navigator.clipboard.writeText("https://raw.githubusercontent.com/Shisuiicaro/source/refs/heads/main/shisuyssource.json");
+      alert("Link Copied!");
+    }
+
+    function openHydra() {
+      window.open("hydralauncher://install-source?urls=https%3A%2F%2Fraw.githubusercontent.com%2FShisuiicaro%2Fsource%2Frefs%2Fheads%2Fmain%2Fshisuyssource.json");
+    }
+  </script>
+</head> 
+<body onload="changeLanguage('en')">
+  <div class="language-selector">
+    <label for="language"></label>
+    <select id="language" onchange="changeLanguage(this.value)">
+      <option value="en">English</option>
+      <option value="pt">Português</option>
+      <option value="ru">Русский</option>
+    </select>
+  </div>
+  <header id="title">Shisuy's Source</header>
+  <h2 id="subtitle">Repack-Games.com</h2>
+
+  <div class="content">
+    <button id="addBtn" onclick="openHydra()">Adicionar ao Hydra</button>
+    <button id="copyBtn" onclick="copyLink()">Copiar Link</button>
+  </div>
+
+  <div class="info">
+    <h3 id="sourceHeader">Sobre a Fonte</h3>
+    <p id="sourceInfo"></p>
+    <h3 id="repackHeader">Sobre os Repacks</h3>
+    <p id="repackInfo"></p>
+  </div>
+
+  <footer id="footer">&copy; 2024 Shisuy's Source</footer>
+</body>
+</html>
